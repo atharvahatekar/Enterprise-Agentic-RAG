@@ -63,6 +63,19 @@ graph TD
     Responder --> UI
     Responder -.-> Memory[(LangGraph MemorySaver)]
 ```
+## Tech Stack
+
+| Layer | Technology |
+|-------|-----------|
+| Orchestration | LangChain + LangGraph |
+| LLMs | Groq (Llama 3.3 70B) via **Portkey** gateway |
+| Guardrails | NeMo Guardrails |
+| Vector DB | Qdrant Cloud |
+| Reranking | FlashRank (local, zero-latency) |
+| Embeddings | Gemini `gemini-embedding-2-preview` (3072-dim) |
+| Document Parsing | pypdf + pdfplumber (local, no OCR service) |
+| Observability | Pydantic Logfire + LangSmith |
+| Evaluation | RAGAS + custom Tool Correctness (Jaccard) |
 
 ---
 
@@ -89,20 +102,6 @@ graph TD
 └── requirements.txt     # Pinned dependencies
 ```
 ---
-
-## Tech Stack
-
-| Layer | Technology |
-|-------|-----------|
-| Orchestration | LangChain + LangGraph |
-| LLMs | Groq (Llama 3.3 70B) via **Portkey** gateway |
-| Guardrails | NeMo Guardrails |
-| Vector DB | Qdrant Cloud |
-| Reranking | FlashRank (local, zero-latency) |
-| Embeddings | Gemini `gemini-embedding-2-preview` (3072-dim) |
-| Document Parsing | pypdf + pdfplumber (local, no OCR service) |
-| Observability | Pydantic Logfire + LangSmith |
-| Evaluation | RAGAS + custom Tool Correctness (Jaccard) |
 
 ## Getting started
 
