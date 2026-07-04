@@ -19,8 +19,6 @@ Safety and operability are part of the request path rather than afterthoughts: N
 
 ## Demo gallery
 
-The README is prepared for four short product recordings:
-
 | Demo | What it should show | GIF path |
 |---|---|---|
 | Grounded Q&A | A normal infrastructure question, the generated answer, and expanded source metadata | `assets/demos/01-grounded-qa.gif` |
@@ -28,11 +26,9 @@ The README is prepared for four short product recordings:
 | Logfire | The nested guardrail, planning, retrieval, reranking, and synthesis spans | `assets/demos/03-logfire-observability.gif` |
 | Portkey | LLM requests, latency/token metadata, routing, and a cache event | `assets/demos/04-portkey-observability.gif` |
 
-Real recordings are intentionally not fabricated from the source code. Follow the short [demo recording guide](assets/demos/README.md) to capture authenticated UI and dashboard footage safely, then enable the ready-made image block documented there.
-
 ## What makes it useful
 
-- **Agentic routing** — a LangGraph planner separates conversational turns from technical questions that require retrieval.
+- **Agentic routing** — a LangGraph planner separates conversational turns from technical questions that require retrieval from .
 - **Grounded answers with sources** — the API returns the selected chunks together with filename, source type, and vector-search score for UI inspection.
 - **Two-stage retrieval** — Qdrant finds a broad candidate set and a local FlashRank cross-encoder reranks it down to the most relevant context.
 - **Input protection** — deterministic role-override detection and NeMo Guardrails block prompt injection, jailbreak, and off-domain requests before the RAG graph runs.
