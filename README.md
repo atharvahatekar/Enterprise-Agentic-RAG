@@ -19,6 +19,34 @@ A production-grade, enterprise-level RAG system built with **LangGraph**, **Port
 
 ---
 
+## Demo
+
+### RAG in Action
+
+The complete flow—from question to a grounded, traceable answer.
+
+![RAG system demo](GIFS/Rec1-Gif.gif)
+
+### Observability with Logfire
+
+End-to-end traces, logs, and execution details for every RAG request.
+
+![RAG observability in Logfire](GIFS/Rec2-Logfire-Gif.gif)
+
+### Usage Analytics with Portkey
+
+User activity, cost, latency, token usage, requests, and complete logs in one view.
+
+![RAG usage analytics in Portkey](GIFS/Rec3-Portkey-Gif.gif)
+
+### Prompt-Injection Protection
+
+NeMo Guardrails keeps the system within policy—even when a prompt attempts to override its persona.
+
+![Prompt-injection protection with NeMo Guardrails](GIFS/Rec4-Guardrails-Gif.gif)
+
+---
+
 ## Agent Intelligence Flow
 
 ```mermaid

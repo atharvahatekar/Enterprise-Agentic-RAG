@@ -5,3 +5,7 @@ __pycache__/
 processed_data/
 DOCS/
 Notebooks/
+.agents/
+.deepeval/
+.pytest_cache/
+.streamlit/
