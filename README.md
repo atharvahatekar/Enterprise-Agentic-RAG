@@ -1,6 +1,6 @@
 <div align="center">
 
-# Nexus — Enterprise Agentic RAG
+# Enterprise Agentic RAG
 
 ### A guarded, source-aware knowledge assistant for enterprise infrastructure documentation
 
