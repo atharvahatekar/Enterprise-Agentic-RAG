@@ -410,7 +410,21 @@ def _render_sources(sources: list) -> None:
     with st.expander(f"Sources and retrieved context · {len(sources)}"):
         for index, source in enumerate(sources, start=1):
             st.markdown(f"**Reference {index}**")
-            st.text(str(source))
+
+            if isinstance(source, dict):
+                meta_parts = []
+                if source.get("source"):
+                    meta_parts.append(source.get("source"))
+                if source.get("source_type"):
+                    meta_parts.append(source.get("source_type"))
+                if source.get("score") is not None:
+                    meta_parts.append(f"score {source.get('score'):.2f}")
+                if meta_parts:
+                    st.caption(" • ".join(meta_parts))
+                st.text(source.get("content") or source.get("text") or "")
+            else:
+                st.text(str(source))
+
             if index < len(sources):
                 st.divider()
 
